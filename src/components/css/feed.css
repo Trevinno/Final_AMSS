@@ -1,0 +1,21 @@
+.center2{
+    border-style: solid;
+    position: relative;
+    height: 520px;
+    width: 420px;
+    left: 26%;
+    top: 50%;
+    margin: 20px 50px 25px 100px;
+  }
+  
+  .center{
+    border-style: dashed;
+    position: absolute;
+    width: 99%;
+    bottom: 5px;
+    height: 105px;
+  }
+
+  .center3{
+    text-align: center;
+  }
