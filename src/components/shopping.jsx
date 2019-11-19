@@ -21,7 +21,15 @@ export default class Shopping extends Component {
 
   componentDidMount() {
     this.setState({arts: getArtF()});
-}
+  }
+
+  handleDelete = itemID => {
+    console.log("Event Handler Called", itemID, shopitems);
+    const shopitems = this.state.arts.filter(c => c._id !== itemID);
+    this.setState({ shopitems });
+  };
+
+
 render() { 
   const {arts} = this.state;
   console.log(arts);
@@ -33,11 +41,12 @@ return(
     <div>
     {arts.filter(art => art.shopping.cost > 1).map(art => (
         <ShopItem
-        key={art.id}
+        key={art._id}
         title={art.title}
         owner_name={art.owner.name}
         cat={art.name}
         cost={art.cost}
+        onDelete={this.handleDelete}
         />
         ))}
     </div>
@@ -50,6 +59,7 @@ return(
         // className={classes.margin}
         color="secondary" 
         size="small"
+        // onClick={console.log("hello")}
         style={{
             height: '20x',
             width: '160px',

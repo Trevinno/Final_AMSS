@@ -30,7 +30,7 @@ export default class Portfolio extends Component {
             <div style={{textAlign: 'center', justifyContent: 'center',
                   alignItems: 'center'}, {paddingTop: '2em'}}   >
               <img
-                src="https://i.ibb.co/yPkzTHq/099940.jpg"
+                src="https://i.ibb.co/x1HMCG8/099980.jpg"
                 alt="avatar"
                 style={{height: '200px'}}
                  />
@@ -44,7 +44,7 @@ export default class Portfolio extends Component {
             <TextField
             id="filled-name"
             label="e-mail"
-            value="crisprz96@gmail.com"
+            value="jaimegomezg@gmail.com"
             margin="normal"
             variant="filled"
             />
@@ -63,7 +63,7 @@ export default class Portfolio extends Component {
             <TextField
             id="filled-name"
             label="Username"
-            value="Blooming_Flower"
+            value="JaimeG"
             margin="normal"
             variant="filled"
             />
@@ -71,7 +71,7 @@ export default class Portfolio extends Component {
             <TextField
             id="filled-name"
             label="State"
-            value="Tamaulipas"
+            value="Nuevo Leon"
             margin="normal"
             variant="filled"
             />
@@ -93,7 +93,7 @@ export default class Portfolio extends Component {
             <TextField
             id="filled-name"
             label="City"
-            value="Matamoros"
+            value="Monterrey"
             margin="normal"
             variant="filled"
             />
@@ -101,8 +101,8 @@ export default class Portfolio extends Component {
             </div>
             </div>
             <br/>
-            <Button variant="contained">
-            Post New Artwork
+            <Button variant="contained" color="primary">
+            Message Artist
             </Button>
 
 
@@ -110,7 +110,7 @@ export default class Portfolio extends Component {
 
             <div className="column">
             <hr style={{borderTop: '3px solid #833fb2', width: '50%'}}/>
-            {arts.filter(art => art.column === 1 && art.owner === "Cristina Perez").map(art => (
+            {arts.filter(art => art.column === 1 && art.owner === "Jaime Gomez").map(art => (
             <ArtP
             key={art.id}
             title={art.title}
@@ -121,7 +121,7 @@ export default class Portfolio extends Component {
 
             <div className="column">
             <hr style={{borderTop: '3px solid #833fb2', width: '50%'}}/>
-            {arts.filter(art => art.column === 2 && art.owner === "Cristina Perez").map(art => (
+            {arts.filter(art => art.column === 2 && art.owner === "Jaime Gomez").map(art => (
             <ArtP
             key={art.id}
             title={art.title}
@@ -132,7 +132,7 @@ export default class Portfolio extends Component {
 
             <div className="column">
             <hr style={{borderTop: '3px solid #833fb2', width: '50%'}}/>
-            {arts.filter(art => art.column === 3 && art.owner === "Cristina Perez").map(art => (
+            {arts.filter(art => art.column === 3 && art.owner === "Jaime Gomez").map(art => (
             <ArtP
             key={art.id}
             title={art.title}

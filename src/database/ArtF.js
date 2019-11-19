@@ -4,7 +4,7 @@ const artsF = [
     title: "The Yellow Umbrella",
     owner: { name: "Jaime Gomez", pic: "https://i.ibb.co/x1HMCG8/099980.jpg"},
     url: "https://i.ibb.co/3Cf4cPv/304-original.png",
-    route: "jaime",
+    route: "/jaime",
     sub: true,
     cat: { name: "Cultura Pop", path: "/cat5"},
     shopping: {cost: 8, cart: true}
@@ -14,7 +14,7 @@ const artsF = [
     title: "Happy Couple",
     owner: { name: "George Ruth", pic: "https://i.ibb.co/2ZKZnWB/099921.jpg"},
     url: "https://i.ibb.co/NtW6bM4/253-original.png",
-    route: "george",
+    route: "/george",
     sub: true,
     cat: { name: "Caricaturas", path: "/cat6"},
     shopping: {cost: 8, cart: true}
@@ -24,7 +24,7 @@ const artsF = [
     title: "Cooking Thoughts",
     owner: { name: "Isabel Mendiola", pic: "https://i.ibb.co/JkRPh9W/059998.jpg"},
     url: "https://i.ibb.co/X7xDBjy/11-original-png-1000h.jpg",
-    route: "isabel",
+    route: "/isabel",
     sub: true,
     cat: { name: "Comics", path: "/cat7"},
     shopping: {cost: 8, cart: true}
@@ -34,7 +34,7 @@ const artsF = [
     title: "The Long Ride",
     owner: { name: "Jaime Gomez", pic: "https://i.ibb.co/x1HMCG8/099980.jpg"},
     url: "https://i.ibb.co/vsLNbwR/Thelongride.jpg",
-    route: "jaime",
+    route: "/jaime",
     sub: true,
     cat: { name: "Comics", path: "/cat7"},
     shopping: {cost: -1, cart: false}
@@ -44,7 +44,7 @@ const artsF = [
     title: "Late Night",
     owner: { name: "Jaime Gomez", pic: "https://i.ibb.co/x1HMCG8/099980.jpg"},
     url: "https://i.ibb.co/sJF2ywD/latenight.jpg",
-    route: "isabel",
+    route: "/isabel",
     sub: true,
     cat: { name: "Comics", path: "/cat7"},
     shopping: {cost: -1, cart: false}
@@ -54,7 +54,7 @@ const artsF = [
     title: "Summer",
     owner: { name: "Jaime Gomez", pic: "https://i.ibb.co/x1HMCG8/099980.jpg"},
     url: "https://i.ibb.co/hd4rPY7/Summer.jpg",
-    route: "jaime",
+    route: "/jaime",
     sub: true,
     cat: { name: "Comics", path: "/cat7"},
     shopping: {cost: -1, cart: false}
@@ -64,7 +64,7 @@ const artsF = [
     title: "Off The Wall",
     owner: { name: "David Smith", pic: "https://i.ibb.co/q06NFVH/099903.jpg"},
     url: "https://i.ibb.co/YXYQLWB/Shoes.jpg",
-    route: "david",
+    route: "/david",
     sub: false,
     cat: { name: "Cultura Pop", path: "/cat5"},
     shopping: {cost: -1, cart: false}
@@ -74,7 +74,7 @@ const artsF = [
     title: "Breathe",
     owner: { name: "Jaime Gomez", pic: "https://i.ibb.co/x1HMCG8/099980.jpg"},
     url: "https://i.ibb.co/BZncNQM/Nature.jpg",
-    route: "jaime",
+    route: "/jaime",
     sub: true,
     cat: { name: "Comics", path: "/cat7"},
     shopping: {cost: -1, cart: false}
@@ -84,7 +84,7 @@ const artsF = [
     title: "Hunter",
     owner: { name: "George Ruth", pic: "https://i.ibb.co/PDCDmF8/099921.jpg"},
     url: "https://i.ibb.co/cbK3sp6/Hunter.jpg",
-    route: "george",
+    route: "/george",
     sub: false,
     cat: { name: "Animales", path: "/cat2"},
     shopping: {cost: -1, cart: false}
@@ -94,7 +94,7 @@ const artsF = [
     title: "New Born",
     owner: { name: "David Smith", pic: "https://i.ibb.co/q06NFVH/099903.jpg"},
     url: "https://i.ibb.co/4jRNtmf/puper.jpg",
-    route: "david",
+    route: "/david",
     sub: false,
     cat: { name: "Animales", path: "/cat2"},
     shopping: {cost: -1, cart: false}
@@ -104,7 +104,7 @@ const artsF = [
     title: "The Boat Capitan",
     owner: { name: "Jessica White", pic: "https://i.ibb.co/645Z9py/099954.jpg"},
     url: "https://i.ibb.co/gymZ5Z8/Mickey.jpg", 
-    route: "jess",
+    route: "/jess",
     sub: false,
     cat: { name: "Caricaturas", path: "/cat6"},
     shopping: {cost: -1, cart: false}
@@ -114,7 +114,7 @@ const artsF = [
     title: "The Wolf at Night",
     owner: { name: "Jessica White", pic: "https://i.ibb.co/645Z9py/099954.jpg"},
     url: "https://i.ibb.co/vBrmgqL/perrito.jpg", 
-    route: "jess",
+    route: "/jess",
     sub: false,
     cat: { name: "Animales", path: "/cat2"},
     shopping: {cost: -1, cart: false}
@@ -124,7 +124,7 @@ const artsF = [
     title: "Super Man",
     owner: { name: "George Ruth", pic: "https://i.ibb.co/PDCDmF8/099921.jpg"},
     url: "https://i.ibb.co/7Y8tmxS/superhero.jpg",
-    route: "george",
+    route: "/george",
     sub: false,
     cat: { name: "Comics", path: "/cat7"},
     shopping: {cost: -1, cart: false}
@@ -134,7 +134,7 @@ const artsF = [
     title: "The Detective",
     owner: { name: "Jessica White", pic: "https://i.ibb.co/645Z9py/099954.jpg"},
     url: "https://i.ibb.co/M8s4Df7/detective.jpg", 
-    route: "jess",
+    route: "/jess",
     sub: false,
     cat: { name: "Retratos", path: "/cat1"},
     shopping: {cost: -1, cart: false}
@@ -144,7 +144,7 @@ const artsF = [
     title: "Tiny",
     owner: { name: "David Smith", pic: "https://i.ibb.co/q06NFVH/099903.jpg"},
     url: "https://i.ibb.co/BLjyGtj/Who.jpg",
-    route: "david",
+    route: "/david",
     sub: false,
     cat: { name: "Naturaleza", path: "/cat3"},
     shopping: {cost: -1, cart: false}
@@ -154,7 +154,7 @@ const artsF = [
     title: "Creativity",
     owner: { name: "David Smith", pic: "https://i.ibb.co/q06NFVH/099903.jpg"},
     url: "https://i.ibb.co/7GVjj3B/the-hand.jpg",
-    route: "david",
+    route: "/david",
     sub: false,
     cat: { name: "Anatomia", path: "/cat4"},
     shopping: {cost: -1, cart: false}

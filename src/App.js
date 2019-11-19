@@ -15,6 +15,7 @@ import Cat_6 from "./components/cat6"
 import Cat_7 from "./components/cat7"
 import Shopping from "./components/shopping"
 import Feed from "./components/feed"
+import Jaime from "./components/jaime"
 
 
 
@@ -40,6 +41,7 @@ export default class App extends Component {
             <Route path="/cat5" component={Cat_5} />
             <Route path="/cat6" component={Cat_6} />
             <Route path="/cat7" component={Cat_7} />
+            <Route path="/jaime" component={Jaime} />
             <Route path="/shopping" component={Shopping} />
 
             <Redirect from="/" to="/homepage" />

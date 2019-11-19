@@ -19,3 +19,28 @@
   .center3{
     text-align: center;
   }
+
+  .imgcss {
+    height: 400px;
+    width: 415px;
+    left: 5px;
+  }
+
+  .avatarcss {
+    height: 100px;
+    width: 100px;
+  }
+
+  .buttoncssx {
+    height: 35px;
+    width: 160px;
+    left: 220px;
+    top: 10px;
+  }
+
+  .buttoncssb {
+    height: 35px;
+    width: 160px;
+    left: 220px;
+    top: 30px;
+  }

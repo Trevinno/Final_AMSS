@@ -11,7 +11,7 @@ const useStyles = makeStyles(theme => ({
   }
   }));
 
-export default function ShopItem({key, title, owner_name, cat, cost}) {
+export default function ShopItem({key, title, owner_name, cat, cost, onDelete}) {
   return (
     <div>
      <div className="item">
@@ -25,6 +25,8 @@ export default function ShopItem({key, title, owner_name, cat, cost}) {
         // className={classes.margin}
         color="secondary" 
         size="small"
+        onClick={onDelete}
+        // onClick={() => console.log(key)}
         style={{
             height: '20x',
             width: '160px',
@@ -34,9 +36,9 @@ export default function ShopItem({key, title, owner_name, cat, cost}) {
             Remove from cart
         </Button>
       <div className="quantity">
-        <input type="text" name="name" defaultValue={100} />
+        {/* <input type="text" name="name" defaultValue={100}/> */}
+        <div className="total-price">{cost}</div>
       </div>
-      <div className="total-price">{cost}</div>
     </div>
     </div>
   );

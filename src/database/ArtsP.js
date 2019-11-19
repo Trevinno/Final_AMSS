@@ -62,6 +62,41 @@ const artsP = [
     url: "https://i.ibb.co/BypGLwC/349-original.png",
     column: 3
   },
+  {
+    _id: "210",
+    title: "Yellow Umbrella",
+    owner: "Jaime Gomez",
+    url: "https://i.ibb.co/3Cf4cPv/304-original.png",
+    column: 1
+  },
+  {
+    _id: "211",
+    title: "The long Ride",
+    owner: "Jaime Gomez",
+    url: "https://i.ibb.co/vsLNbwR/Thelongride.jpg",
+    column: 1
+  },
+  {
+    _id: "212",
+    title: "Late Night",
+    owner: "Jaime Gomez",
+    url: "https://i.ibb.co/sJF2ywD/latenight.jpg",
+    column: 2
+  },
+  {
+    _id: "213",
+    title: "Summer",
+    owner: "Jaime Gomez",
+    url: "https://i.ibb.co/hd4rPY7/Summer.jpg",
+    column: 2
+  },
+  {
+    _id: "214",
+    title: "Breathe",
+    owner: "Jaime Gomez",
+    url: "https://i.ibb.co/BZncNQM/Nature.jpg",
+    column: 3
+  }
 ];
 
 export default function getArtsP() {

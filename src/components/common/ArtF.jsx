@@ -14,7 +14,7 @@ const useStyles = makeStyles(theme => ({
 
 export default class ArtF extends Component {
     render(){
-        const {title, owner_name, owner_pic, route, url} = this.props;
+        const {title, owner_name, owner_pic, route, url, history, match} = this.props;
         // const classes = useStyles();
         return (
         <div>
@@ -24,21 +24,23 @@ export default class ArtF extends Component {
         <img
             src={url}
             alt={title}
-            style={{
-                height: '400px',
-                width: '400px',
-                left: '5px'
-            }}
+            className="imgcss"
+            // style={{
+            //     height: '400px',
+            //     width: '400px',
+            //     left: '5px'
+            // }}
             />
 
         <div className="center"> 
             <img
                 src={owner_pic}
                 alt="avatar"
-                style={{
-                height: '80px',
-                width: '80px'
-                }}
+                className="avatarcss"
+                // style={{
+                // height: '80px',
+                // width: '80px'
+                // }}
                     />
         {owner_name}
         </div> 
@@ -48,26 +50,31 @@ export default class ArtF extends Component {
         // className={classes.margin}
         color="primary" 
         size="small"
-        style={{
-            height: '50x',
-            width: '160px',
-            left: '220px',
-            top: '1px'
-        }}>
+        className="buttoncssx"
+        onClick={() => history.push(route)}
+        // style={{
+        //     height: '50x',
+        //     width: '160px',
+        //     left: '220px',
+        //     top: '1px'
+        // }}
+        >
             Explore
         </Button>
         </div>
         <Button 
         variant="contained" 
+        className="buttoncssb"
         // className={classes.margin}
         color="secondary" 
         size="small"
-        style={{
-            height: '20x',
-            width: '160px',
-            left: '220px',
-            top: '-10px'
-        }}>
+        // style={{
+        //     height: '20x',
+        //     width: '160px',
+        //     left: '220px',
+        //     top: '-10px'
+        // }}
+        >
             Add to Cart
         </Button>
 
