@@ -14,11 +14,11 @@ const useStyles = makeStyles(theme => ({
 export default function ShopItem({key, title, owner_name, cat, cost, onDelete}) {
   return (
     <div>
-     <div className="item">
+     <div className="item row">
       <div className="description">
-        <span>{title}</span>
-        <span>{owner_name}</span>
-        <span>{cat}</span>
+        <span className="column">{title}</span>
+        <span className="column">{owner_name}</span>
+        <span className="column">{cat}</span>
       </div>
       <Button 
         variant="contained" 

@@ -8,6 +8,7 @@ export default function NavBar() {
       <NavLink to="/homepage" className="navbar-brand">
         Artist.ly
       </NavLink>
+      {/* Aqui estan los botones para acceder la otras rutas en la aplicacion */}
       <button
         className="navbar-toggler"
         type="button"

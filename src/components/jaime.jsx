@@ -104,10 +104,11 @@ export default class Portfolio extends Component {
             <Button variant="contained" color="primary">
             Message Artist
             </Button>
-
-
+            <Button variant="contained" color="secondary">
+            Subscribe
+            </Button>
             <div className="row">
-
+            
             <div className="column">
             <hr style={{borderTop: '3px solid #833fb2', width: '50%'}}/>
             {arts.filter(art => art.column === 1 && art.owner === "Jaime Gomez").map(art => (

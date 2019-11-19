@@ -17,8 +17,6 @@ import Shopping from "./components/shopping"
 import Feed from "./components/feed"
 import Jaime from "./components/jaime"
 
-
-
 export default class App extends Component {
   render(){
   return (
@@ -27,6 +25,7 @@ export default class App extends Component {
         <main role="main"style={{
           backgroundColor: '#66DAC7'
       }}>
+        {/* Aqui se declaran todas las rutas que se van a usar en la aplicacion */}
           <Switch>
             <Route path="/portfolio" component={Portfolio} />
             <Route path="/homepage" component={Homepage} />

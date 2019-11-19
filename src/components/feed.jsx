@@ -18,7 +18,7 @@ constructor(props) {
         cats:[]
     };
     }
-
+    //Aqui se carga la base de datos al estado local del componente
     componentDidMount() {
         this.setState({arts: getArtF()});
         this.setState({cats: getArtFC()});
@@ -38,6 +38,7 @@ constructor(props) {
             />
           </div>
           <div className="col-10">
+          {/* Aqui se filtran los componentes a base de los trabajos que no tienen a alguien subscripto */}
           {arts.filter(art => art.sub === false).map(art => (
             <ArtF
             key={art.id}

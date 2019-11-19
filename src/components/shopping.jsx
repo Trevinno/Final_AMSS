@@ -22,7 +22,7 @@ export default class Shopping extends Component {
   componentDidMount() {
     this.setState({arts: getArtF()});
   }
-
+  //Esta funcion hace que los componentes individuales de compra se puedan borrar
   handleDelete = itemID => {
     console.log("Event Handler Called", itemID, shopitems);
     const shopitems = this.state.arts.filter(c => c._id !== itemID);
@@ -39,6 +39,7 @@ return(
     {/* Title */}
     <div className="title">Shopping Bag</div>
     <div>
+    {/* Aqui se mapean los componentes */}
     {arts.filter(art => art.shopping.cost > 1).map(art => (
         <ShopItem
         key={art._id}

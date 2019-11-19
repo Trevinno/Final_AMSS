@@ -40,7 +40,7 @@ export default class Portfolio extends Component {
             <h2 style={{paddingTop: '0.2em'}}>Cristina Perez</h2>
             <div className="row"> 
             <div className="column">
-
+            {/* Aqui se incluye la informacion basica del usuario */}
             <TextField
             id="filled-name"
             label="e-mail"
@@ -107,7 +107,7 @@ export default class Portfolio extends Component {
 
 
             <div className="row">
-
+            {/* Aqui se mapean el arte de los artistas en su perfil */}
             <div className="column">
             <hr style={{borderTop: '3px solid #833fb2', width: '50%'}}/>
             {arts.filter(art => art.column === 1 && art.owner === "Cristina Perez").map(art => (

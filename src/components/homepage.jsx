@@ -5,7 +5,7 @@ import './css/homepage.scss';
 export default class Directory extends React.Component {
   constructor() {
     super();
-
+    //En el estado inicial de la pagina se guardan la informacion de las categoria que se usaran
     this.state = {
       sections: [
         {
@@ -62,6 +62,7 @@ export default class Directory extends React.Component {
     return (
     <div className='homepage'>
       <div className='directory-menu'>
+        {/* Aqui se mapean los componentes de la pagina inicial  */}
         {this.state.sections.map(({ id, ...otherSectionProps }) => (
           <MenuItem 
           key={id} {...otherSectionProps} />

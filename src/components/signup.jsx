@@ -13,7 +13,7 @@ export default class SignUp extends Component {
             hasAgreed: false
         };
     }
-
+    //Esta funcion hace que las cajas cambien de color
     handleChange = e => {
         let target = e.target;
         let value = target.type === 'checkbox' ? target.checked : target.value;
@@ -23,7 +23,7 @@ export default class SignUp extends Component {
           [name]: value
         });
     }
-
+    //Esta funcion hace que la informacion que se entre en los campos se mueda mandar al servidor
     handleSubmit = e => {
         e.preventDefault();
 
@@ -33,7 +33,7 @@ export default class SignUp extends Component {
 
     render() {
         return (
-
+          //Aqui se colocan los campos de la pagina
             <div className="App">
           <div className="App__Aside"></div>
           <div className="App__Form">

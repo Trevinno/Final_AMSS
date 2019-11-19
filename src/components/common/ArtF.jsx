@@ -18,7 +18,7 @@ export default class ArtF extends Component {
         // const classes = useStyles();
         return (
         <div>
-
+        {/* A continuacion se carga todas las partes del componente como el titulo, artista, la foto y opciones de navegacion */}
         <p className="center3">{title}</p>
         <div className="center2">
         <img

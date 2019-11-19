@@ -12,7 +12,7 @@ export default class SignIn extends Component {
         };
 
     }
-
+    // Esta funcion hace que las cajas cambien de color
     handleChange = e => {
         let target = e.target;
         let value = target.type === 'checkbox' ? target.checked : target.value;

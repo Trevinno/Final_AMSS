@@ -8,7 +8,7 @@ export default class Cat1 extends Component {
     arts: [],
     cats: []
   };
-
+  //Aqui se carga la base de datos al estado local
   componentDidMount() {
     this.setState({arts: getArtF()});
     this.setState({cats: getArtFC()});
@@ -28,6 +28,7 @@ export default class Cat1 extends Component {
             />
           </div>
           <div className="col-10">
+          {/* Aqui se filtran los trabajos de arte a base de la categoria */}
         {arts.filter(art => art.sub != true && art.cat.name === "Retratos").map(art => (
         <ArtF
         key={art.id}
