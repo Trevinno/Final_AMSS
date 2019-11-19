@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import "./css/homepage.scss"
 
 export default function NavBar() {
   return (
@@ -34,19 +35,13 @@ export default function NavBar() {
           <NavLink to="/portfolio" className="nav-item nav-link">
             Portfolio
           </NavLink>
-          <NavLink to="/signup" className="nav-item nav-link" style={{
-            left: '700px'
-          }}>
+          <NavLink to="/signup" className="nav-item nav-link navbar">
             SignUp
           </NavLink>
-          <NavLink to="/signin" className="nav-item nav-link" style={{
-            left: '700px'
-          }}>
+          <NavLink to="/signin" className="nav-item nav-link navbar">
             SignIn
           </NavLink>
-          <NavLink to="/shopping" className="nav-item nav-link" style={{
-            left: '700px'
-          }}>
+          <NavLink to="/shopping" className="nav-item nav-link navbar" >
             Cart
           </NavLink>
         </div>

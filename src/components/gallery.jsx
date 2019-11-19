@@ -35,15 +35,12 @@ constructor(props) {
       
     <nav aria-label="breadcrumb">
         <ol className="breadcrumb">
-        <li className="breadcrumb-item" style={{
-            left: '35%'
-            }}> {arts.length} Posts </li>
-        <li className="breadcrumb-item" style={{
-            left: '35%'
-            }}>2 New Posts</li>
-        <li className="breadcrumb-item"  style={{
-            left: '35%'
-            }}> {unique} Subscribers </li>
+        <li className="breadcrumb-item minimenu">
+             {arts.length} Posts </li>
+        <li className="breadcrumb-item minimenu">
+            2 New Posts</li>
+        <li className="breadcrumb-item minimenu">
+             {unique} Subscribers </li>
         </ol>
     </nav>
 
