@@ -7,7 +7,7 @@ export default function CatTable({cats, history, match}) {
         <li
           key={0}
           className={"list-group-item list-group-item-action"}
-          onClick={() => history.push()}
+          onClick={() => history.push("/feed")}
         >
           All Categories
         </li>
