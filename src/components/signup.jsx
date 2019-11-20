@@ -10,6 +10,12 @@ export default class SignUp extends Component {
             email: '',
             password: '',
             name: '',
+            user: '',
+            occupation: '',
+            country: '',
+            state: '',
+            city: '',
+
             hasAgreed: false
         };
     }
@@ -19,11 +25,12 @@ export default class SignUp extends Component {
         let value = target.type === 'checkbox' ? target.checked : target.value;
         let name = target.name;
 
+
         this.setState({
           [name]: value
         });
     }
-    //Esta funcion hace que la informacion que se entre en los campos se mueda mandar al servidor
+    //Esta funcion hace que la informacion que se entre en los campos se pueda mandar al servidor
     handleSubmit = e => {
         e.preventDefault();
 
@@ -63,27 +70,27 @@ export default class SignUp extends Component {
 
               <div className="FormField">
                 <label className="FormField__Label" htmlFor="email">UserName</label>
-                <input type="email" id="email" className="FormField__Input" placeholder="Enter your email" name="email" value={this.state.email} onChange={this.handleChange} />
+                <input type="user" id="user" className="FormField__Input" placeholder="Enter your username" name="user" value={this.state.user} onChange={this.handleChange} />
               </div>
 
               <div className="FormField">
                 <label className="FormField__Label" htmlFor="email">Occupation</label>
-                <input type="email" id="email" className="FormField__Input" placeholder="Enter your email" name="email" value={this.state.email} onChange={this.handleChange} />
+                <input type="occupation" id="occupation" className="FormField__Input" placeholder="Enter your occupation" name="occupation" value={this.state.occupation} onChange={this.handleChange} />
               </div>
 
               <div className="FormField">
                 <label className="FormField__Label" htmlFor="email">Country</label>
-                <input type="email" id="email" className="FormField__Input" placeholder="Enter your email" name="email" value={this.state.email} onChange={this.handleChange} />
+                <input type="country" id="country" className="FormField__Input" placeholder="Enter your country" name="country" value={this.state.country} onChange={this.handleChange} />
               </div>
 
               <div className="FormField">
                 <label className="FormField__Label" htmlFor="email">State</label>
-                <input type="email" id="email" className="FormField__Input" placeholder="Enter your email" name="email" value={this.state.email} onChange={this.handleChange} />
+                <input type="state" id="state" className="FormField__Input" placeholder="Enter your state" name="state" value={this.state.state} onChange={this.handleChange} />
               </div>
 
               <div className="FormField">
                 <label className="FormField__Label" htmlFor="email">City</label>
-                <input type="email" id="email" className="FormField__Input" placeholder="Enter your email" name="email" value={this.state.email} onChange={this.handleChange} />
+                <input type="city" id="city" className="FormField__Input" placeholder="Enter your city" name="city" value={this.state.city} onChange={this.handleChange} />
               </div>
 
               <div className="FormField">
@@ -99,7 +106,7 @@ export default class SignUp extends Component {
               </div>
 
               <div className="FormField">
-                  <button className="FormField__Button mr-20">Sign Up</button> <Link to="/sign-in" className="FormField__Link">I'm already member</Link>
+                  <button className="FormField__Button mr-20" onClick={() => this.props.history.push('/homepage')}  >Sign Up</button> <Link to="/signin" className="FormField__Link">I'm already member</Link>
               </div>
             </form>
           </div>

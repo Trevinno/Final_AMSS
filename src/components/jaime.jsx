@@ -6,6 +6,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Button } from '@material-ui/core';
 import ArtP from './common/ArtP'
 import getArtP from '../database/ArtsP'
+import Popup from './popup'
 
 
 export default class Portfolio extends Component {
@@ -13,8 +14,15 @@ export default class Portfolio extends Component {
     super(props);
     this.state = {
         arts: [],
+        showPopup: false
     };
     }
+
+    togglePopup() {  
+      this.setState({  
+           showPopup: !this.state.showPopup  
+      });  
+      } 
 
     componentDidMount() {
         this.setState({arts: getArtP()});
@@ -33,7 +41,7 @@ export default class Portfolio extends Component {
                 src="https://i.ibb.co/x1HMCG8/099980.jpg"
                 alt="avatar"
                 style={{height: '200px'}}
-                 />
+              />
 
             </div>
 
@@ -101,10 +109,16 @@ export default class Portfolio extends Component {
             </div>
             </div>
             <br/>
-            <Button variant="contained" color="primary">
+            <Button variant="contained" color="primary" onClick={this.togglePopup.bind(this)}>
             Message Artist
             </Button>
-            <Button variant="contained" color="secondary">
+            {this.state.showPopup ?  
+            <Popup    
+            closePopup={this.togglePopup.bind(this)}  
+            />  
+            : null  
+            } 
+            <Button variant="contained" color="secondary" className=''>
             Subscribe
             </Button>
             <div className="row">

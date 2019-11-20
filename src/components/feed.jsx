@@ -47,6 +47,7 @@ constructor(props) {
             owner_pic={art.owner.pic}
             route={art.route}
             url={art.url}
+            {...this.props}
             />
             ))}
           </div>
