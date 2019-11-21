@@ -21,12 +21,11 @@ export default function ShopItem({key, title, owner_name, cat, cost, onDelete}) 
         <span className="column">{cat}</span>
       </div>
       <Button 
-        variant="contained" 
-        // className={classes.margin}
+        variant="contained"
         color="secondary" 
         size="small"
         onClick={onDelete}
-        // onClick={() => console.log(key)}
+        onClick={onDelete.bind.this}
         style={{
             height: '20x',
             width: '160px',

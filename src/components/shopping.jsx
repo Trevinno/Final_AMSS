@@ -14,21 +14,29 @@ const useStyles = makeStyles(theme => ({
   }));
 
 export default class Shopping extends Component {
-  state = {
+  constructor() {
+    super();
+    this.state = {
     arts: [],
   };
+}
 
 
   componentDidMount() {
     this.setState({arts: getArtF()});
   }
   //Esta funcion hace que los componentes individuales de compra se puedan borrar
-  handleDelete = itemID => {
-    console.log("Event Handler Called", itemID, shopitems);
-    const shopitems = this.state.arts.filter(c => c._id !== itemID);
-    this.setState({ shopitems });
-  };
+  // handleDelete = itemID => {
+  //   console.log("Event Handler Called", itemID, shopitems);
+  //   const shopitems = this.state.arts.filter(c => c._id !== itemID);
+  //   this.setState({ shopitems });
+  // };
 
+    deleteAlt = (index, e) => {
+      const shopitems = Object.assign([], this.state.arts);
+      shopitems.splice(index, 1);
+      this.setState({arts: shopitems});
+    } 
 
 render() { 
   const {arts} = this.state;
@@ -47,7 +55,8 @@ return(
         owner_name={art.owner.name}
         cat={art.name}
         cost={art.cost}
-        onDelete={this.handleDelete}
+        // onDelete={this.handleDelete.bind(this, key)}
+        onDelete={this.deleteAlt.bind(this, index)}
         />
         ))}
     </div>
