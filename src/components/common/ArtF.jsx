@@ -14,13 +14,13 @@ const useStyles = makeStyles(theme => ({
 
 export default class ArtF extends Component {
     render(){
-        const {title, owner_name, owner_pic, route, url, history, match} = this.props;
+        const {title, owner_name, owner_pic, route, url, history, match,css} = this.props;
         // const classes = useStyles();
         return (
         <div>
         {/* A continuacion se carga todas las partes del componente como el titulo, artista, la foto y opciones de navegacion */}
-        <p className="center3">{title}</p>
-        <div className="center2">
+        <p className="center3 font">{title}</p>
+        <div className={css}>
         <img
             src={url}
             alt={title}
@@ -32,7 +32,7 @@ export default class ArtF extends Component {
             // }}
             />
 
-        <div className="center"> 
+        <div className="center font2"> 
             <img
                 src={owner_pic}
                 alt="avatar"

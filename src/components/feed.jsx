@@ -15,7 +15,8 @@ constructor(props) {
     super(props);
     this.state = {
         arts: [],
-        cats:[]
+        cats:[],
+        css: 'center4'
     };
     }
     //Aqui se carga la base de datos al estado local del componente
@@ -27,7 +28,7 @@ constructor(props) {
 
 
     render() {
-    const {arts, cats} = this.state;
+    const {arts, cats, css} = this.state;
     return (
         <div style={{ marginTop: "1em" }}>
         <div className="row">
@@ -47,6 +48,7 @@ constructor(props) {
             owner_pic={art.owner.pic}
             route={art.route}
             url={art.url}
+            css={css}
             {...this.props}
             />
             ))}

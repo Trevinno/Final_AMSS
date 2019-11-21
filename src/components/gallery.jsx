@@ -14,7 +14,8 @@ constructor(props) {
     super(props);
     this.state = {
         arts: [],
-        unique:[]
+        unique:[],
+        css: 'center2'
     };
     }
 
@@ -29,7 +30,7 @@ constructor(props) {
 
 
     render() {
-    const {arts, unique} = this.state;
+    const {arts, unique, css} = this.state;
     return (
     <div>
       
@@ -53,6 +54,7 @@ constructor(props) {
     owner_pic={art.owner.pic}
     route={art.route}
     url={art.url}
+    css={css}
     {...this.props}
     />
     ))}

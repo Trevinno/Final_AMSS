@@ -44,7 +44,7 @@ export default class Portfolio extends Component {
 
             </div>
 
-            <h2 style={{paddingTop: '0.2em'}}>Cristina Perez</h2>
+            <h2 className='name' style={{paddingTop: '0.2em'}}>Cristina Perez</h2>
             <div className="row"> 
             <div className="column">
             {/* Aqui se incluye la informacion basica del usuario */}

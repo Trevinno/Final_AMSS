@@ -6,7 +6,8 @@ import {getArtF, getArtFC} from "../database/ArtF"
 export default class Cat1 extends Component {
   state = {
     arts: [],
-    cats: []
+    cats: [],
+    css: 'center4'
   };
 
   componentDidMount() {
@@ -16,7 +17,7 @@ export default class Cat1 extends Component {
 
 
   render() {
-    const {arts, cats} = this.state;
+    const {arts, cats, css} = this.state;
     console.log(cats);
     console.log(cats);
     return (
@@ -37,6 +38,7 @@ export default class Cat1 extends Component {
         owner_pic={art.owner.pic}
         route={art.route}
         url={art.url}
+        css={css}
         />
         ))}
 

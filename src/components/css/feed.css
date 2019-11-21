@@ -1,9 +1,31 @@
+  @import url('https://fonts.googleapis.com/css?family=Calistoga&display=swap');
+  @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+  .font {
+    font-family: 'Calistoga', cursive;
+    font-size: 35px;
+  }
+
+  .font2 {
+    font-family: 'Raleway', sans-serif;
+  }
+
+
 .center2{
     border-style: solid;
     position: relative;
     height: 520px;
     width: 420px;
     left: 26%;
+    top: 50%;
+    margin: 20px 50px 25px 100px;
+  }
+
+  .center4{
+    border-style: solid;
+    position: relative;
+    height: 520px;
+    width: 420px;
+    left: 21%;
     top: 50%;
     margin: 20px 50px 25px 100px;
   }
@@ -48,3 +70,4 @@
   .minimenu {
     left: 50px;
   }
+  
