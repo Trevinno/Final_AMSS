@@ -174,3 +174,8 @@ input:focus {
     margin-right: 20px;
   }
 }
+
+.white {
+  background-color: lightblue;
+  width: 600px;
+}
