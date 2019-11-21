@@ -36,6 +36,11 @@ export default class Shopping extends Component {
 render() { 
   const {arts} = this.state;
   console.log(arts);
+  let may = 8;
+  let total = arts.filter(art => art.shopping.cost > 1).reduce((acc, cur) => {
+    return acc + cur.shopping.cost;
+  }, 0);
+  console.log(total, 'aqui');
 return(
     <div>
       <shopItem></shopItem>
@@ -56,7 +61,7 @@ return(
     </div>
     <div className="item white">
       <div className="description">
-        <p>Total</p>
+    <p>Total: {total}</p>
       </div>
       <Button 
         variant="contained" 
@@ -66,16 +71,12 @@ return(
         // onClick={console.log("hello")}
         style={{
             height: '20x',
-            width: '160px',
-            left: '220px',
+            width: '660px',
+            left: '1px',
             top: '-10px'
         }}>
             Buy
         </Button>
-      <div>
-        <input type="text" name="name" defaultValue={100} />
-      </div>
-      <div className="total-price">Test</div>
     </div>
     </div>
 

@@ -16,12 +16,11 @@ export default function ShopItem({key, title, owner_name, cat, cost, onDelete, a
     <div style={{
       padding: '2px'
     }}>
-     <div className="item row white">
-      <div className="description">
-        <span className="column">{art.title}</span>
-        <span className="column">{art.owner.name}</span>
-        <span className="column">{art.cat.name}</span>
-      </div>
+     <div className="item white">
+        <span style={{margin: '4px'}}>{art.title}</span>
+        <span style={{margin: '8px'}}>{art.owner.name}</span>
+        <span style={{margin: '4px'}}>{art.cat.name}</span>
+        <span style={{marginLeft: '20px', right: '8px'}}>Cost: {art.shopping.cost}</span>
       <Button 
         variant="contained"
         color="secondary" 
@@ -31,7 +30,7 @@ export default function ShopItem({key, title, owner_name, cat, cost, onDelete, a
         style={{
             height: '20x',
             width: '160px',
-            left: '220px',
+            left: '100px',
             top: '-10px'
         }}>
             Remove from cart
