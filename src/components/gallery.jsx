@@ -18,12 +18,12 @@ constructor(props) {
         css: 'center2'
     };
     }
-
+    //Esta funcion carga la informacin del arte de la base de datos
     componentDidMount() {
         this.setState({arts: getArtF()});
         this.setState({unique: getArfFU()});
     }
-
+    //Esta funcion crea un arrglo con las pinturas pero sin repetir las categorias
     onlyUnique = (value, index, self) => { 
         return self.indexOf(value) === index;
     }
@@ -32,8 +32,8 @@ constructor(props) {
     render() {
     const {arts, unique, css} = this.state;
     return (
+        // Aqui se encuentras las obras que se pueden ver si tienes una subscripcion activa
     <div>
-      
     <nav aria-label="breadcrumb">
         <ol className="breadcrumb">
         <li className="breadcrumb-item minimenu">
@@ -46,6 +46,7 @@ constructor(props) {
     </nav>
 
     <div>
+        {/* Aqui se mapean las artes a base de si el usuario esta subscrito al los otros usuarios */}
     {arts.filter(art => art.sub === true).map(art => (
     <ArtF
     key={art.id}

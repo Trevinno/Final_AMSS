@@ -5,7 +5,7 @@ import './css/homepage.scss';
 export default class Directory extends React.Component {
   constructor() {
     super();
-    //En el estado inicial de la pagina se guardan la informacion de las categoria que se usaran
+    //En el estado inicial de la pagina se guardan la informacion de las categoria que se usaran, esta informacion se pasa a otro componente
     this.state = {
       sections: [
         {

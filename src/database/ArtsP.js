@@ -1,3 +1,4 @@
+// Contains the data to be shown in the profile pages
 const artsP = [
   {
     _id: "201",

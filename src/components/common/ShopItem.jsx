@@ -16,6 +16,7 @@ export default function ShopItem({key, title, owner_name, cat, cost, onDelete, a
     <div style={{
       padding: '2px'
     }}>
+      {/* Aqui se encuentra la informacion de cada objeto que se va a comprar */}
      <div className="item white">
         <span style={{margin: '4px'}}>{art.title}</span>
         <span style={{margin: '8px'}}>{art.owner.name}</span>

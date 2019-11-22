@@ -21,7 +21,7 @@ export default class Shopping extends Component {
   };
 }
 
-
+  //Esta funcion carga informacion de la base de datos
   componentDidMount() {
     this.setState({arts: getArtF()});
   }
@@ -36,11 +36,11 @@ export default class Shopping extends Component {
 render() { 
   const {arts} = this.state;
   console.log(arts);
-  let may = 8;
+  // Esta funcion hace que el costo de cada campo se sumen a una variable total
   let total = arts.filter(art => art.shopping.cost > 1).reduce((acc, cur) => {
     return acc + cur.shopping.cost;
   }, 0);
-  console.log(total, 'aqui');
+
 return(
     <div>
       <shopItem></shopItem>
@@ -61,14 +61,13 @@ return(
     </div>
     <div className="item white">
       <div className="description">
+        {/* el total se calculo en una fucnion en la parte de arriba */}
     <p>Total: {total}</p>
       </div>
       <Button 
         variant="contained" 
-        // className={classes.margin}
         color="secondary" 
         size="small"
-        // onClick={console.log("hello")}
         style={{
             height: '20x',
             width: '660px',

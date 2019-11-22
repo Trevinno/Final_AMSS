@@ -6,7 +6,7 @@ export default class ArtP extends Component {
         const {title, url} = this.props;
         return (
             <div>
-
+            {/* Shows the image of the art */}
             <img
             src={url}
             alt={title}

@@ -17,7 +17,7 @@ export default class Portfolio extends Component {
         showPopup: false
     };
     }
-
+    // este botton permite el uso de una ventana pop up al momento de precionar el boton
     togglePopup() {  
       this.setState({  
            showPopup: !this.state.showPopup  
@@ -112,6 +112,7 @@ export default class Portfolio extends Component {
             <Button variant="contained" color="primary" onClick={this.togglePopup.bind(this)}>
             Message Artist
             </Button>
+            {/* El boton permite que el usuario agregue informacion para poder mensajear el dueño del perfil */}
             {this.state.showPopup ?  
             <Popup    
             closePopup={this.togglePopup.bind(this)}  

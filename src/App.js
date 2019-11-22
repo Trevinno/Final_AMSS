@@ -23,7 +23,7 @@ export default class App extends Component {
     <React.Fragment>
         <NavBar />
         <main role="main"style={{
-          backgroundColor: '#66DAC7'
+          backgroundColor: '#f5f5dc'
       }}>
         {/* Aqui se declaran todas las rutas que se van a usar en la aplicacion */}
           <Switch>

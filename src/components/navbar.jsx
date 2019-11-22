@@ -27,7 +27,7 @@ export default function NavBar() {
           </NavLink>
 
           <NavLink to="/feed" className="nav-item nav-link">
-            Feed
+            Search
           </NavLink>
 
           <NavLink to="/gallery" className="nav-item nav-link">

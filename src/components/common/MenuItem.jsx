@@ -7,6 +7,7 @@ const MenuItem = ({ title, imageUrl, size, history, linkUrl, match }) => (
     className={`${size} menu-item`}
     onClick={() => history.push(`${linkUrl}`)}
   >
+    {/* Incluye la foto que se ven en los botones */}
     <div
       className='background-image'
       style={{

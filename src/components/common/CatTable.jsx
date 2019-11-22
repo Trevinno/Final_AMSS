@@ -11,7 +11,7 @@ export default function CatTable({cats, history, match}) {
         >
           All Categories
         </li>
-
+        {/* Maps all the categories into a table */}
         {cats.map(cats => (
           <li
             key={0}

@@ -12,7 +12,7 @@ export default class SignIn extends Component {
         };
 
     }
-    // Esta funcion hace que las cajas cambien de color
+    // Esta funcion hace que las cajas se cambien de color cuando se seleccionan con el mouse
     handleChange = e => {
         let target = e.target;
         let value = target.type === 'checkbox' ? target.checked : target.value;
@@ -22,7 +22,7 @@ export default class SignIn extends Component {
           [name]: value
         });
     }
-
+    //Esta funcion hace que la informacion que se entre en los campos se pueda mandar al servidor
     handleSubmit(e) {
         e.preventDefault();
 
@@ -32,6 +32,7 @@ export default class SignIn extends Component {
 
     render() {
         return (
+          //Aqui se colocan los campos de la pagina, tambien hay links que pueden direccionar al usuario a ciertas paginas
           <div className="App">
           <div className="App__Aside"></div>
           <div className="App__Form">

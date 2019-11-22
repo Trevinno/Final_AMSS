@@ -9,7 +9,7 @@ export default class Cat1 extends Component {
     cats: [],
     css: 'center4'
   };
-
+  //Esta funcion carga los datos de la base de datos
   componentDidMount() {
     this.setState({arts: getArtF()});
     this.setState({cats: getArtFC()});
@@ -30,6 +30,7 @@ export default class Cat1 extends Component {
             />
           </div>
           <div className="col-10">
+            {/* Aqui se filtran las artes a base de la categoria */}
         {arts.filter(art => art.sub != true && art.cat.name === "Naturaleza").map(art => (
         <ArtF
         key={art.id}

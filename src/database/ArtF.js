@@ -1,3 +1,4 @@
+//Contains the data for all the artworks to be shown in the feed
 const artsF = [
     {
     _id: "101",
@@ -160,6 +161,7 @@ const artsF = [
     shopping: {cost: -1, cart: false}
     },
   ];
+    //Algorithm that returns an array of unique categories used in the table that shows all the categories
   const solution = array => {
     let unique = new Set();
     array.forEach( e => {
@@ -182,18 +184,18 @@ const artsF = [
 return final;
 
 }
-  
+  //Function that returns the data to be shown
   export function getArtF() {
       return artsF;
 }
-
+    //Function that returns the length of unique owners to be shown in the feed page
   export function getArfFU() {
     let unique = [...new Set(artsF.map(item => item.owner.name))];
     return unique.length;
 }
-
+    //returns the array created by the algo shown above
     export const getArtFC = () => {
-return solution(artsF.map(item => item.cat));
+    return solution(artsF.map(item => item.cat));
 }
 
 

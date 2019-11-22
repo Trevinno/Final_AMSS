@@ -108,10 +108,10 @@ export default class Portfolio extends Component {
             </div>
             </div>
             <br/>
+            {/* Este button permite que cuando se presione arroje una segmento para subir la informacion de una pieza de arte para publicarla */}
             <Button variant="contained" onClick={this.togglePopup.bind(this)}>
             Post New Artwork
             </Button>
-
             {this.state.showPopup ?  
             <Popup    
             closePopup={this.togglePopup.bind(this)}  
@@ -122,6 +122,7 @@ export default class Portfolio extends Component {
 
             <div className="row">
             {/* Aqui se mapean el arte de los artistas en su perfil */}
+            {/* se filtra a base de quien es el dueño y se filtran en comunas diferentes */}
             <div className="column">
             <hr style={{borderTop: '3px solid #833fb2', width: '50%'}}/>
             {arts.filter(art => art.column === 1 && art.owner === "Cristina Perez").map(art => (

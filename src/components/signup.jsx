@@ -40,7 +40,7 @@ export default class SignUp extends Component {
 
     render() {
         return (
-          //Aqui se colocan los campos de la pagina
+          //Aqui se colocan los campos de la pagina, tambien hay links que pueden direccionar al usuario a ciertas paginas
             <div className="App">
           <div className="App__Aside"></div>
           <div className="App__Form">
