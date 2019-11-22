@@ -12,30 +12,39 @@ class Popup extends React.Component {
   <div>
   <TextField
     id="standard-basic"
-    label="Nombre de imagen"
+    label="country"
     margin="normal"
   />
   </div>
   <div>
   <TextField
     id="standard-basic"
-    label="Categoria"
+    label="state"
+    margin="normal"
+  />
+  </div>
+  <div>
+  <TextField
+    id="standard-basic"
+    label="city"
+    margin="normal"
+  />
+  </div>
+  <div>
+  <TextField
+    id="standard-basic"
+    label="username"
     margin="normal"
   />
   </div>
   <TextField
     id="standard-basic"
-    label="Costo"
+    label="occupation"
     margin="normal"
   />
   </div> 
-  <label htmlFor="contained-button-file">
-        <Button variant="contained" component="span">
-          Upload
-        </Button>
-      </label>
   <Button variant="outlined" onClick={this.props.closePopup}>
-        Post Artwork
+        Save Changes
   </Button>
   </div>  
   );  

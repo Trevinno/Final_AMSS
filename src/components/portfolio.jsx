@@ -7,6 +7,7 @@ import { Button } from '@material-ui/core';
 import ArtP from './common/ArtP'
 import getArtP from '../database/ArtsP'
 import Popup from './popupP'
+import Popedit from './popedit'
 
 
 export default class Portfolio extends Component {
@@ -108,6 +109,18 @@ export default class Portfolio extends Component {
             </div>
             </div>
             <br/>
+            <div>
+            <Button variant="contained" onClick={this.togglePopup.bind(this)}>
+            Edit Profile
+            </Button>
+            {this.state.showPopup ?  
+            <Popedit    
+            closePopup={this.togglePopup.bind(this)}  
+            />  
+            : null  
+            } 
+            </div>
+
             {/* Este button permite que cuando se presione arroje una segmento para subir la informacion de una pieza de arte para publicarla */}
             <Button variant="contained" onClick={this.togglePopup.bind(this)}>
             Post New Artwork
