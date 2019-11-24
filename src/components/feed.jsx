@@ -16,7 +16,8 @@ constructor(props) {
     this.state = {
         arts: [],
         cats:[],
-        css: 'center4'
+        css: 'center4',
+        term: ''
     };
     }
     //Aqui se carga la base de datos al estado local del componente
@@ -25,10 +26,22 @@ constructor(props) {
         this.setState({cats: getArtFC()});
     }
 
+    //Esta funcion actualiza el state con lo que se busque
+    searchHandler = (e) => {
+      this.setState({term: e.target.value})
+    }
+    
+    //Esta funcion se usa para filtar la busquda
+    searchingFor = (term) => {
+      return (x) => {
+        return x.owner.name.toLowerCase().includes(term.toLowerCase()) || !term;
+      };
+    }
+
 
 
     render() {
-    const {arts, cats, css} = this.state;
+    const {arts, cats, css, term} = this.state;
     return (
         <div style={{ marginTop: "1em" }}>
         <div className="row">
@@ -39,8 +52,18 @@ constructor(props) {
             />
           </div>
           <div className="col-10">
+
+          {/* Con este componente se pueden hacer busquedas a base del autor */}
+          <h3>Search Bar</h3>
+        <form> <input
+         type='text'
+         onChange={this.searchHandler}
+         value={term}
+          />
+        </form>
+
           {/* Aqui se filtran los componentes a base de los trabajos que no tienen a alguien subscripto */}
-          {arts.filter(art => art.sub === false).map(art => (
+          {arts.filter(this.searchingFor(term)).filter(art => art.sub === false).map(art => (
             <ArtF
             key={art.id}
             title={art.title}
