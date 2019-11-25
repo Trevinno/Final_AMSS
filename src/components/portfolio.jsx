@@ -24,6 +24,12 @@ export default class Portfolio extends Component {
       });  
       } 
 
+      togglePopupP() {  
+        this.setState({  
+             showPopupP: !this.state.showPopupP  
+        });  
+        } 
+
     componentDidMount() {
         this.setState({arts: getArtP()});
     }
@@ -110,12 +116,12 @@ export default class Portfolio extends Component {
             </div>
             <br/>
             <div>
-            <Button variant="contained" onClick={this.togglePopup.bind(this)}>
+            <Button variant="contained" onClick={this.togglePopupP.bind(this)}>
             Edit Profile
             </Button>
-            {this.state.showPopup ?  
+            {this.state.showPopupP ?  
             <Popedit    
-            closePopup={this.togglePopup.bind(this)}  
+            closePopup={this.togglePopupP.bind(this)}  
             />  
             : null  
             } 

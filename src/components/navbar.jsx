@@ -31,7 +31,7 @@ export default function NavBar() {
           </NavLink>
 
           <NavLink to="/gallery" className="nav-item nav-link">
-            Gallery
+          Museum
           </NavLink>
           <NavLink to="/portfolio" className="nav-item nav-link">
             Portfolio

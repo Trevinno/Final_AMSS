@@ -7,6 +7,7 @@ import { Button } from '@material-ui/core';
 import ArtP from './common/ArtP'
 import getArtP from '../database/ArtsP'
 import Popup from './popup'
+import PopupC from './popupC'
 
 
 export default class Portfolio extends Component {
@@ -14,7 +15,8 @@ export default class Portfolio extends Component {
     super(props);
     this.state = {
         arts: [],
-        showPopup: false
+        showPopup: false,
+        showPopupC: false
     };
     }
     // este botton permite el uso de una ventana pop up al momento de precionar el boton
@@ -23,6 +25,12 @@ export default class Portfolio extends Component {
            showPopup: !this.state.showPopup  
       });  
       } 
+
+      togglePopupC() {  
+        this.setState({  
+             showPopupC: !this.state.showPopupC 
+        });  
+        } 
 
     componentDidMount() {
         this.setState({arts: getArtP()});
@@ -122,6 +130,18 @@ export default class Portfolio extends Component {
             <Button variant="contained" color="secondary" className=''>
             Subscribe
             </Button>
+            <Button variant="contained" color="primary" onClick={this.togglePopupC.bind(this)}>
+            Commission Artist
+            </Button>
+            {/* El boton permite que el usuario agregue informacion para poder mensajear el dueño del perfil */}
+            {this.state.showPopupC ?  
+            <PopupC    
+            closePopup={this.togglePopupC.bind(this)}  
+            />  
+            : null  
+            } 
+            
+
             <div className="row">
             
             <div className="column">
