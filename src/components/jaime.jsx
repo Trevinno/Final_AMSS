@@ -8,6 +8,7 @@ import ArtP from './common/ArtP'
 import getArtP from '../database/ArtsP'
 import Popup from './popup'
 import PopupC from './popupC'
+import PopupS from './popupS'
 
 
 export default class Portfolio extends Component {
@@ -16,7 +17,8 @@ export default class Portfolio extends Component {
     this.state = {
         arts: [],
         showPopup: false,
-        showPopupC: false
+        showPopupC: false,
+        showPopupS: false
     };
     }
     // este botton permite el uso de una ventana pop up al momento de precionar el boton
@@ -31,6 +33,12 @@ export default class Portfolio extends Component {
              showPopupC: !this.state.showPopupC 
         });  
         } 
+
+        togglePopupS() {  
+          this.setState({  
+               showPopupS: !this.state.showPopupS  
+          });  
+          } 
 
     componentDidMount() {
         this.setState({arts: getArtP()});
@@ -120,6 +128,15 @@ export default class Portfolio extends Component {
             <Button variant="contained" color="primary" onClick={this.togglePopup.bind(this)}>
             Message Artist
             </Button>
+          
+            <Button variant="contained" color="secondary" onClick={this.togglePopupS.bind(this)}>
+            Subscribe
+            </Button>
+
+            <Button variant="contained" color="primary" onClick={this.togglePopupC.bind(this)}>
+            Commission Artist
+            </Button>
+
             {/* El boton permite que el usuario agregue informacion para poder mensajear el dueño del perfil */}
             {this.state.showPopup ?  
             <Popup    
@@ -127,12 +144,16 @@ export default class Portfolio extends Component {
             />  
             : null  
             } 
-            <Button variant="contained" color="secondary" className=''>
-            Subscribe
-            </Button>
-            <Button variant="contained" color="primary" onClick={this.togglePopupC.bind(this)}>
-            Commission Artist
-            </Button>
+
+            {/* El boton permite que el usuario agregue informacion para poder mensajear el dueño del perfil */}
+            {this.state.showPopupS ?  
+            <PopupS   
+            closePopup={this.togglePopupS.bind(this)}  
+            />  
+            : null  
+            } 
+          
+
             {/* El boton permite que el usuario agregue informacion para poder mensajear el dueño del perfil */}
             {this.state.showPopupC ?  
             <PopupC    

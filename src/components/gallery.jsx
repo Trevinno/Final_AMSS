@@ -8,7 +8,7 @@ import ArtF from "./common/ArtF"
 import {getArtF, getArfFU} from "../database/ArtF"
 
 
-
+// Gallery es la pagina de museo, en este codigo solo tiene diferente nombre
 export default class Gallery extends Component {
 constructor(props) {
     super(props);
